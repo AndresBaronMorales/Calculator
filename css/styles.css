@@ -1,0 +1,162 @@
+/* Reset */
+html,
+body{
+  margin: 0;
+  padding: 0;
+}
+
+button{
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+body{
+  font-family: "Righteous", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  background: rgb(0,51,42);
+  background: radial-gradient(circle, rgba(0,51,42,1) 0%, rgba(0,0,0,1) 100%);
+}
+
+main{
+  height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* Vars */
+:root{
+  --color--base-100: #CCFFF6;
+  --color--base-300: #8AFAE6;
+  --color--base-500: #36E0C2;
+  --color--base-700: #0F9F85;
+  --color--base-800: #087561;
+  --color--base-900: #00332A;
+  --color--black-25: #00000025;
+}
+
+/* Fonts Size */
+.fs{
+  font-size: 1rem;
+}
+
+.fs-3{
+  font-size: 3rem;
+}
+
+.fs-04{
+  font-size: 0.4rem;
+}
+
+/* Colors */
+.color-800{
+  color: var(--color--base-800);
+}
+
+.color-100{
+  color: var(--color--base-100);
+}
+
+
+/* Calculator */
+.calculator{
+  width: 480px;
+  background-color: var(--color--base-100);
+  border: 1px solid var(--color--base-700);
+  box-shadow: 0 10px 10px var(--color--black-25);
+  border-radius: 25px;
+  padding: 30px;
+  overflow: hidden;
+}
+
+.buttons{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: 50px;
+}
+
+#delete, #clear{
+  grid-column: span 2;
+}
+
+#equal{
+  grid-column: 4;
+  grid-row: 4/7;
+}
+
+/* Buttons */
+.btn{  
+  border: 2px solid var(--color--base-300);
+  box-shadow: 0 0px 5px var(--color--black-25);
+  border-radius: 5px;
+  font-size: 1.5rem;
+  color: var(--color--base-700);
+  cursor: pointer;
+}
+
+.btn-number{
+  background-color: var(--color--base-500);
+}
+
+.btn-number:hover{
+  background-color: var(--color--base-700);
+  color: var(--color--base-500);
+}
+
+.btn-sign{
+  background-color: var(--color--base-700);
+  color: var(--color--base-500);
+}
+
+.btn-sign:disabled{
+  cursor: auto;
+}
+
+.btn-sign:hover:enabled{
+  background-color: var(--color--base-900);
+  color: var(--color--base-700);
+}
+
+.btn-dark{
+  background-color: var(--color--base-900);
+}
+
+.btn-dark:disabled{
+  cursor: auto;
+}
+
+.btn-dark:hover:enabled{
+  background-color: var(--color--base-800);
+  color: var(--color--base-100);
+}
+
+/* Display */
+.display{
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  justify-content: center;
+  background-color: var(--color--base-900);
+  border-radius: 5px;
+  padding: 0 10px;
+  font-size: 2rem;
+  color: var(--color--base-300);
+}
+
+.display-output{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}

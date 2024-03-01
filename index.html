@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="shortcut icon" href="ico/calculator.ico">
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/styles.css">
+
+  <title>Calculator</title>
+</head>
+<body>
+  <main>
+    <section class="calculator">
+      <div class="display">
+        <div id="output" class="display-output"></div>
+        <span id="input"></span>
+      </div>
+      <div class="buttons">
+        <button id="clear" disabled class="btn btn-dark"><i class="fa-solid fa-c"></i></button>
+        <button id="delete" disabled class="btn btn-dark"><i class="fa-solid fa-delete-left"></i></button>
+        <button value="%" data-calculator="operation" disabled class="btn btn-sign"><i class="fa-solid fa-percent"></i></button>
+        <button value="/" data-calculator="operation" disabled class="btn btn-sign"><i class="fa-solid fa-divide"></i></button>
+        <button value="*" data-calculator="operation" disabled class="btn btn-sign"><i class="fa-solid fa-xmark"></i></button>
+        <button value="-" data-calculator="operation" disabled class="btn btn-sign"><i class="fa-solid fa-minus"></i></button>
+        <button value="7" data-calculator="number" class="btn btn-number">7</button>
+        <button value="8" data-calculator="number" class="btn btn-number">8</button>
+        <button value="9" data-calculator="number" class="btn btn-number">9</button>
+        <button value="+" data-calculator="operation" disabled class="btn btn-sign"><i class="fa-solid fa-plus"></i></button>
+        <button value="4" data-calculator="number" class="btn btn-number">4</button>
+        <button value="5" data-calculator="number" class="btn btn-number">5</button>
+        <button value="6" data-calculator="number" class="btn btn-number">6</button>
+        <button value="1" data-calculator="number" class="btn btn-number">1</button>
+        <button value="2" data-calculator="number" class="btn btn-number">2</button>
+        <button value="3" data-calculator="number" class="btn btn-number">3</button>
+        <button value="xn" data-calculator="operation" disabled class="btn btn-sign"><i class="fa-solid fa-greater-than fa-rotate-270"></i></button>
+        <button value="0" data-calculator="number" class="btn btn-number">0</button>
+        <button value="." data-calculator="number" class="btn btn-sign"><i class="fa-solid fa-circle fs-04"></i></button>
+        <button id="equal" disabled class="btn btn-dark fs-3"><i class="fa-solid fa-equals"></i></button>
+      </div>
+    </section>
+  </main>
+
+  <script src="js/main.js" type="module"></script>
+</body>
+</html>
